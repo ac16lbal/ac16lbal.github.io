@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html><!-- manifest="acsg.appcache"-->
+<head>
+	<title>AC Induction</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="w3.css?v=3">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<link rel="apple-touch-icon" href="touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
+
+	<link rel="apple-touch-startup-image" href="logo.png">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="apple-mobile-web-app-title" content="AC Guide">
+	
+	<style>
+		.w3-sidebar a {
+			font-family: "Roboto", Verdana, sans-serif;
+	 	}
+	 
+		body {
+			padding-top: 20px;
+ 		}
+		
+		body, h1 , h2, h3, h4, h5, h6, .w3-wide {
+			font-family: Verdana, sans-serif;
+			line-height: 1.2;
+			text-align: justify; !important
+	 	}
+		.icon {
+			height: 25px;
+			width: 25px;
+ 		}
+		.imgg {
+			width: 100%;
+			max-width: 650px;
+		}
+		.tab {
+			
+ 		}
+	</style>
+</head>
+
+<body style="margin:auto;">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3; width:200px" id="mySidebar">
+	<div class="w3-container w3-padding-16" style="background-image: url(logo.png); background-repeat: no-repeat; background-size: contain; background-origin: content-box; height: 60px;">
+		<img alt="menu" class="icon w3-hide-large w3-closebtn w3-hover-text-red w3-xxlarge" src="ic_x.png" onclick="w3_close()" />
+	</div>
+
+	<hr style="margin: 0px;" />
+
+	<div class="w3-large w3-text-dark-grey" style="font-weight:bold">
+		<a href="#" class="w3-bar-item w3-button" onclick="openCity(this, 'home')">HOME</a>
+		<a href="javascript:void(0)" onclick="myAccFunc()" class="w3-bar-item w3-button">Campus<i class="fa fa-caret-down"></i></a>
+		<div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+			<a href="#" class="w3-bar-item w3-button" onclick="openCity(this, 'castle')">Castle</a>
+			<a href="#" class="w3-bar-item w3-button" onclick="openCity(this, 'houses')">Houses</a>
+			<a href="#" class="w3-bar-item w3-button" onclick="openCity(this, 'access_codes')">Access Codes</a>
+			<a href="#" class="w3-bar-item w3-button" onclick="openCity(this, 'seafront')">Sea & Pools</a>
+		</div>
+		<a href="#" class="w3-bar-item w3-button" onclick="openCity(this, 'wifi_tech')">Wifi & Tech</a>
+		<a href="#" class="w3-bar-item w3-button" onclick="openCity(this, 'laundry')">Laundry</a>
+		<a href="#" class="w3-bar-item w3-button" onclick="openCity(this, 'platform_6')">Platform 6</a>
+		<a href="#" class="w3-bar-item w3-button" onclick="openCity(this, 'councils')">Councils</a>
+		<a href="#" class="w3-bar-item w3-button" onclick="openCity(this, 'health')">Health</a>
+		<a href="#" class="w3-bar-item w3-button" onclick="openCity(this, 'peer_listeners')">Peer Listeners</a>
+		<a href="#" class="w3-bar-item w3-button" onclick="openCity(this, 'hp_staff')">HP & Staff</a>
+	</div>
+
+	<hr />
+
+	<a href="tel:00393485536420" class="w3-bar-item w3-button w3-padding">Contacts</a> 
+	<a href="#footer"  class="w3-bar-item w3-button w3-padding">School Website</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-uwc-blue w3-xlarge w3-padding-24">
+	<a href="javascript:void(0)" class="w3-opennav" onclick="w3_open()" style="margin-right: 24px;"><img alt="menu" class="icon" src="ic_menu.png" /></a>
+	<span class="w3-wide"><b>AC Induction</b></span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:266px;">
+
+	<!-- Push down content on small screens -->
+	<div class="w3-hide-large" style="margin-top:83px"></div>
+  
+	<!-- Top header -->
+	<header class="w3-container w3-xlarge">
+		<h2 class="w3-left" id="title" style="font-weight: 900;">Home</h2>
+	</header>
+  
+	<div id="home" class="w3-container tab" >
+		<img alt="UWC Logo" src="logo.png" class="imgg">
+		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
+	</div>
+	<div id="castle" class="w3-container tab" style="display:none">
+		<img alt="St. Donats Castle" src="castle.png" class="imgg">
+		<p>Let me bullshit a bit about the castle that is very nice and colorful your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
+	</div>
+	<div id="houses" class="w3-container tab" style="display:none">
+		<img alt="UWC Logo" src="house.png" class="imgg">
+		<p>We have 8 houses: PK, Morgannwg, Powys, Gwinnidd, Whitaker, Sunley, Tice, Madiba. Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
+	</div>
+	<div id="access_codes" class="w3-container tab" style="display:none">
+		<img alt="UWC Logo" src="codes.png" class="imgg">
+		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
+	</div>
+	<div id="seafront" class="w3-container tab" style="display:none">
+		<img alt="UWC Logo" src="seafront.png" class="imgg">
+		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
+	</div>
+	<div id="wifi_tech" class="w3-container tab" style="display:none">
+		<img alt="UWC Logo" src="wifi.png" class="imgg">
+		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
+	</div>
+	<div id="laundry" class="w3-container tab" style="display:none">
+		<img alt="UWC Logo" src="laundry.png" class="imgg">
+		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
+	</div>
+	<div id="platform_6" class="w3-container tab" style="display:none">
+		<img alt="UWC Logo" src="p6.png" class="imgg">
+		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
+	</div>
+	<div id="councils" class="w3-container tab" style="display:none">
+		<img alt="UWC Logo" src="councils.png" class="imgg">
+		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebflBasically, the old service worker continues to control the page as long as there is a tab open to the page. So, you *could * close and re-open the page or press the skipWaiting button, but a longer-term solution is to just enable the Update on Reload checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads.Basically, the old service worker continues to control the page as long as there is a tab open to the page. So, you *could * close and re-open the page or press the skipWaiting button, but a longer-term solution is to just enable the Update on Reload checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads.Basically, the old service worker continues to control the page as long as there is a tab open to the page. So, you *could * close and re-open the page or press the skipWaiting button, but a longer-term solution is to just enable the Update on Reload checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads. </p>
+	</div>
+	<div id="health" class="w3-container tab" style="display:none">
+		<img alt="UWC Logo" src="health.png" class="imgg">
+		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
+	</div>
+	<div id="peer_listeners" class="w3-container tab" style="display:none">
+		<img alt="UWC Logo" src="peer.png" class="imgg">
+		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
+	</div>
+	<div id="hp_staff" class="w3-container tab" style="display:none">
+		<img alt="UWC Logo" src="staff.png" class="imgg">
+		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
+	</div>
+
+
+	<!-- Footer -->
+	<footer class="w3-container w3-padding-16 w3-text-white w3-uwc-green" style="/*position: fixed; bottom: 0px; z-index: 2; width: 100%;*/">
+		<p><a href="www.atlnticcollege.org">Ufficial WebSite</a></p>
+		<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+	</footer>
+
+  <!-- End page content -->
+</div>
+
+<script type="text/javascript">
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker
+		.register('sw.js')
+        .then(function() { console.log('Service Worker Registered'); });
+}
+
+// Accordion 
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+function openCity(el, cityName) {
+	//alert(cityName)
+    var i;
+    var x = document.getElementsByClassName("tab");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+
+	titolo = el.innerHTML
+
+	document.getElementById("title").innerHTML = titolo;
+		
+    document.getElementById(cityName).style.display = "block"; 
+	document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none"; 
+}
+</script>
+
+</body>
+</html>
