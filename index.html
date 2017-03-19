@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html manifest="cache.manifest">
+<html><!-- manifest="acsg.appcache"-->
 <head>
 	<title>AC Induction</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<link rel="stylesheet" href="w3.css">
+	<link rel="stylesheet" href="w3.css?v=3">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 	<link rel="apple-touch-icon" href="touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
 	<link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
 
@@ -20,9 +22,6 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 	<meta name="apple-mobile-web-app-title" content="AC Guide">
-
-	<meta name="theme-color" content="#0068AB" />
-	<meta name="msapplication-navbutton-color" content="#0068AB">
 	
 	<style>
 		.w3-sidebar a {
@@ -46,46 +45,19 @@
 			width: 100%;
 			max-width: 650px;
 		}
-		.slider {
-			transform: translateX(-100%);
-			-webkit-transform: translateX(-100%);
-			display: block;
-		}
-		.slide-in {
-			animation: slide-in 0.5s forwards;
-			-webkit-animation: slide-in 0.5s forwards;
-		}
-		.slide-out {
-			animation: slide-out 0.5s forwards;
-			-webkit-animation: slide-out 0.5s forwards;
-		}
-		@keyframes slide-in {
-			100% { transform: translateX(0%); }
-		}
-		@-webkit-keyframes slide-in {
-			100% { -webkit-transform: translateX(0%); }
-		}
-		@keyframes slide-out {
-			0% { transform: translateX(0%); }
-			100% { transform: translateX(-100%); }
-		}
-		@-webkit-keyframes slide-out {
-			0% { -webkit-transform: translateX(0%); }
-			100% { -webkit-transform: translateX(-100%); }
-		}
+		.tab {
+			
+ 		}
 	</style>
 </head>
 
 <body style="margin:auto;">
 
-<!--Menu-->
-<nav class="w3-sidebar w3-bar-block w3-white w3-collapse slider" style="z-index:3; top:0px;display: block;" id="mySidebar">
-    <header class="w3-container w3-hide-large" style="padding-top: 17px; padding-bottom: 17px;">
-		<img alt="UWC Logo" src="logo.png" style="height: 28px;" />
-		<!--Spacer to keep height-->
-	    <span class="w3-wide" style="opacity: 0"><b>W</b></span>
-		<a href="javascript:void(0)" class="w3-opennav w3-right" onclick="w3_change('out')" style="margin-right: 24px;"><img alt="menu" class="icon" src="ic_x.png" /></a>
-    </header>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3; width:200px" id="mySidebar">
+	<div class="w3-container w3-padding-16" style="background-image: url(logo.png); background-repeat: no-repeat; background-size: contain; background-origin: content-box; height: 60px;">
+		<img alt="menu" class="icon w3-hide-large w3-closebtn w3-hover-text-red w3-xxlarge" src="ic_x.png" onclick="w3_close()" />
+	</div>
 
 	<hr style="margin: 0px;" />
 
@@ -113,29 +85,29 @@
 	<a href="#footer"  class="w3-bar-item w3-button w3-padding">School Website</a>
 </nav>
 
-<!--Top/phones_only-->
-<header class="w3-container w3-top w3-hide-large w3-uwc-blue w3-xlarge w3-padding-16">
-	<a href="javascript:void(0)" class="w3-opennav" onclick="w3_change('in')" style="margin-right: 24px;"><img alt="menu" class="icon" src="ic_menu.png" /></a>
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-uwc-blue w3-xlarge w3-padding-24">
+	<a href="javascript:void(0)" class="w3-opennav" onclick="w3_open()" style="margin-right: 24px;"><img alt="menu" class="icon" src="ic_menu.png" /></a>
 	<span class="w3-wide"><b>AC Induction</b></span>
 </header>
 
-<!--Div to close menu when clicking outside-->
-<div class="w3-overlay w3-hide-large" onclick="w3_change('out')" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-<!--Actual page-->
+<!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:266px;">
 
-	<!--Spacer for top/phones_only-->
-	<div class="w3-hide-large" style="margin-top:45px"></div>
+	<!-- Push down content on small screens -->
+	<div class="w3-hide-large" style="margin-top:83px"></div>
   
-	<!--Title-->
+	<!-- Top header -->
 	<header class="w3-container w3-xlarge">
 		<h2 class="w3-left" id="title" style="font-weight: 900;">Home</h2>
 	</header>
-	<!--Divs for different contents-->
+  
 	<div id="home" class="w3-container tab" >
 		<img alt="UWC Logo" src="logo.png" class="imgg">
-		<p>This website contains all the informations that you need for your life here at Atlantic College. Press the menu button ( <img alt="menu" style="width:20px;height:20px;filter:invert(100%);" src="ic_menu.png" /> ) at the top-left corner to navigate in the different sections. If you wanna save this site as an application, you can press "share" on your phone, and then select the option "add to homescreen". If you encounter any problem with this, feel free to ask the <b>IT Rep</b> in your house, he'll always be willing to help you in any way. If that doesn't work (they are not obniscent), just go to the <b>IT Office</b> in the science block, and the'll find the solution to your problems. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
+		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
 	</div>
 	<div id="castle" class="w3-container tab" style="display:none">
 		<img alt="St. Donats Castle" src="castle.png" class="imgg">
@@ -183,20 +155,21 @@
 	</div>
 
 
-	<!--Footer-->
-	<footer class="w3-container w3-padding-16 w3-text-white w3-uwc-green">
+	<!-- Footer -->
+	<footer class="w3-container w3-padding-16 w3-text-white w3-uwc-green" style="/*position: fixed; bottom: 0px; z-index: 2; width: 100%;*/">
 		<p><a href="www.atlnticcollege.org">Ufficial WebSite</a></p>
 		<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 	</footer>
 
+  <!-- End page content -->
 </div>
 
 <script type="text/javascript">
-/*if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
 	navigator.serviceWorker
 		.register('sw.js')
         .then(function() { console.log('Service Worker Registered'); });
-}*/
+}
 
 // Accordion 
 function myAccFunc() {
@@ -209,14 +182,14 @@ function myAccFunc() {
 }
 
 // Script to open and close sidebar
-function w3_change(what) {
-    document.getElementById("mySidebar").className = "w3-sidebar w3-bar-block w3-white w3-collapse slider slide-" + what;
-	if (what=="in") {
-		document.getElementById("myOverlay").style.display = "block";
-	} else {
-		document.getElementById("myOverlay").style.display = "none";
-	}
-    
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
 }
 
 function openCity(el, cityName) {
