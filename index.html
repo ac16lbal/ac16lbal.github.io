@@ -4,7 +4,7 @@
 	<title>AC Induction</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<link rel="stylesheet" href="w3.css">
 
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -23,29 +23,21 @@
 
 	<meta name="theme-color" content="#0068AB" />
 	<meta name="msapplication-navbutton-color" content="#0068AB">
-	
+
 	<style>
 		.w3-sidebar a {
 			font-family: "Roboto", Verdana, sans-serif;
 	 	}
-	 
+
 		body {
 			padding-top: 20px;
  		}
-		
+
 		body, h1 , h2, h3, h4, h5, h6, .w3-wide {
 			font-family: Verdana, sans-serif;
 			line-height: 1.2;
 			text-align: justify; !important
 	 	}
-		.icon {
-			height: 25px;
-			width: 25px;
- 		}
-		.imgg {
-			width: 100%;
-			max-width: 650px;
-		}
 		.slider {
 			transform: translateX(-100%);
 			-webkit-transform: translateX(-100%);
@@ -73,6 +65,33 @@
 			0% { -webkit-transform: translateX(0%); }
 			100% { -webkit-transform: translateX(-100%); }
 		}
+		.ics {
+			background-size:200%;
+			background-image: url('/ics.png');
+			height: 25px;
+			width: 25px;
+		}
+		.m {background-position: 0% 100%;}
+		.v {background-position: 0% 0%;}
+		.x {background-position: 100% 0%;}
+		.imgs {
+			background-size:cover;
+			background-image: url('/imgs.png');
+			width: 100%;
+			max-width: 650px;
+		}
+		.castle {background-position: 0% 0%;}
+		.codes {background-position: 0% 9.09%;}
+		.councils {background-position: 0% 18.18%;}
+		.home {background-position: 0% 27.27%;}
+		.house {background-position: 0% 36.36%;}
+		.laundry {background-position: 0% 45.45%;}
+		.p6 {background-position: 0% 54.55%;}
+		.peer {background-position: 0% 63.64%;}
+		.seafront {background-position: 0% 72.73%;}
+		.staff {background-position: 0% 81.82%;}
+		.wifi {background-position: 0% 90.91%;}	
+		.health {background-position: 0% 100%;}
 	</style>
 </head>
 
@@ -84,14 +103,14 @@
 		<img alt="UWC Logo" src="logo.png" style="height: 28px;" />
 		<!--Spacer to keep height-->
 	    <span class="w3-wide" style="opacity: 0"><b>W</b></span>
-		<a href="javascript:void(0)" class="w3-opennav w3-right" onclick="w3_change('out')" style="margin-right: 24px;"><img alt="Close menu" class="icon" src="ic_x.png" /></a>
+		<a href="javascript:void(0)" class="w3-opennav w3-right" onclick="w3_change('out')"><img alt="Close menu" class="ics x" src="ts.png" /></a>
     </header>
 
 	<hr style="margin: 0px;" />
 
 	<div class="w3-large w3-text-dark-grey" style="font-weight:bold">
 		<a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="openCity(this, 'home')">HOME</a>
-		<a href="javascript:void(0)" onclick="myAccFunc()" class="w3-bar-item w3-button">Campus <img alt="arrow down" class="icon" src="ic_v.png" /></a>
+		<a href="javascript:void(0)" onclick="myAccFunc()" class="w3-bar-item w3-button">Campus <img alt="arrow down" class="ics v" src="ts.png" /></a>
 		<div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
 			<a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="openCity(this, 'castle')">Castle</a>
 			<a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="openCity(this, 'houses')">Houses</a>
@@ -109,13 +128,13 @@
 
 	<hr />
 
-	<a href="tel:00393485536420" class="w3-bar-item w3-button w3-padding">Contacts</a> 
+	<a href="tel:00393485536420" class="w3-bar-item w3-button w3-padding">Contacts</a>
 	<a href="#footer"  class="w3-bar-item w3-button w3-padding">School Website</a>
 </nav>
 
 <!--Top/phones_only-->
 <header class="w3-container w3-top w3-hide-large w3-uwc-blue w3-xlarge w3-padding-16">
-	<a href="javascript:void(0)" class="w3-opennav" onclick="w3_change('in')" style="margin-right: 24px;"><img alt="menu" class="icon" src="ic_menu.png" /></a>
+	<a href="javascript:void(0)" class="w3-opennav" onclick="w3_change('in')" style="margin-right: 24px;"><img alt="menu" class="ics m" src="ts.png" /></a>
 	<span class="w3-wide"><b>AC Induction</b></span>
 </header>
 
@@ -127,58 +146,58 @@
 
 	<!--Spacer for top/phones_only-->
 	<div class="w3-hide-large" style="margin-top:45px"></div>
-  
+
 	<!--Title-->
 	<header class="w3-container w3-xlarge">
 		<h2 class="w3-left" id="title" style="font-weight: 900;">Home</h2>
 	</header>
 	<!--Divs for different contents-->
 	<div id="home" class="w3-container tab" >
-		<img alt="UWC Logo" src="logo.png" class="imgg">
-		<p>This website contains all the informations that you need for your life here at Atlantic College. Press the menu button ( <img alt="menu" style="width:20px;height:20px;filter:invert(100%);" src="ic_menu.png" /> ) at the top-left corner to navigate in the different sections. If you wanna save this site as an application, you can press "share" on your phone, and then select the option "add to homescreen". If you encounter any problem with this, feel free to ask the <b>IT Rep</b> in your house, he'll always be willing to help you in any way. If that doesn't work (they are not obniscent), just go to the <b>IT Office</b> in the science block, and the'll find the solution to your problems. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
+		<img alt="UWC Logo" src="tb.png" class="imgs home">
+		<p>This website contains all the informations that you need for your life here at Atlantic College. Press the menu button ( <img alt="menu" style="width:20px;height:20px;filter:invert(100%);" class="ics m" src="ts.png" /> ) at the top-left corner to navigate in the different sections. If you wanna save this site as an application, you can press "share" on your phone, and then select the option "add to homescreen". If you encounter any problem with this, feel free to ask the <b>IT Rep</b> in your house, he'll always be willing to help you in any way. If that doesn't work (they are not obniscent), just go to the <b>IT Office</b> in the science block, and the'll find the solution to your problems. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
 	</div>
 	<div id="castle" class="w3-container tab" style="display:none">
-		<img alt="St. Donats Castle" src="castle.png" class="imgg">
+		<img alt="St. Donats Castle" src="tb.png" class="imgs castle">
 		<p>Let me bullshit a bit about the castle that is very nice and colorful your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
 	</div>
 	<div id="houses" class="w3-container tab" style="display:none">
-		<img alt="PK House" src="house.png" class="imgg">
+		<img alt="PK House" src="tb.png" class="imgs house">
 		<p>We have 8 houses: PK, Morgannwg, Powys, Gwinnidd, Whitaker, Sunley, Tice, Madiba. Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
 	</div>
 	<div id="access_codes" class="w3-container tab" style="display:none">
-		<img alt="Pin Code" src="codes.png" class="imgg">
+		<img alt="Pin Code" src="tb.png" class="imgs codes">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
 	</div>
 	<div id="seafront" class="w3-container tab" style="display:none">
-		<img alt="Swimming pool" src="seafront.png" class="imgg">
+		<img alt="Swimming pool" src="tb.png" class="imgs seafront">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
 	</div>
 	<div id="wifi_tech" class="w3-container tab" style="display:none">
-		<img alt="Tech shit" src="wifi.png" class="imgg">
+		<img alt="Tech shit" src="tb.png" class="imgs wifi">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
 	</div>
 	<div id="laundry" class="w3-container tab" style="display:none">
-		<img alt="Laundry room" src="laundry.png" class="imgg">
+		<img alt="Laundry room" src="tb.png" class="imgs laundry">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
 	</div>
 	<div id="platform_6" class="w3-container tab" style="display:none">
-		<img alt="Platform 6" src="p6.png" class="imgg">
+		<img alt="Platform 6" src="tb.png" class="imgs p6">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
 	</div>
 	<div id="councils" class="w3-container tab" style="display:none">
-		<img alt="Student council" src="councils.png" class="imgg">
+		<img alt="Student council" src="tb.png" class="imgs councils">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebflBasically, the old service worker continues to control the page as long as there is a tab open to the page. So, you *could * close and re-open the page or press the skipWaiting button, but a longer-term solution is to just enable the Update on Reload checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads.Basically, the old service worker continues to control the page as long as there is a tab open to the page. So, you *could * close and re-open the page or press the skipWaiting button, but a longer-term solution is to just enable the Update on Reload checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads.Basically, the old service worker continues to control the page as long as there is a tab open to the page. So, you *could * close and re-open the page or press the skipWaiting button, but a longer-term solution is to just enable the Update on Reload checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads. </p>
 	</div>
 	<div id="health" class="w3-container tab" style="display:none">
-		<img alt="Health center" src="health.png" class="imgg">
+		<img alt="Health center" src="tb.png" class="imgs health">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
 	</div>
 	<div id="peer_listeners" class="w3-container tab" style="display:none">
-		<img alt="Peer listeners" src="peer.png" class="imgg">
+		<img alt="Peer listeners" src="tb.png" class="imgs peer">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
 	</div>
 	<div id="hp_staff" class="w3-container tab" style="display:none">
-		<img alt="Staff" src="staff.png" class="imgg">
+		<img alt="Staff" src="tb.png" class="imgs staff">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
 	</div>
 
@@ -198,7 +217,7 @@
         .then(function() { console.log('Service Worker Registered'); });
 }*/
 
-// Accordion 
+// Accordion
 function myAccFunc() {
     var x = document.getElementById("demoAcc");
     if (x.className.indexOf("w3-show") == -1) {
@@ -216,7 +235,7 @@ function w3_change(what) {
 	} else {
 		document.getElementById("myOverlay").style.display = "none";
 	}
-    
+
 }
 
 function openCity(el, cityName) {
@@ -224,14 +243,14 @@ function openCity(el, cityName) {
     var i;
     var x = document.getElementsByClassName("tab");
     for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
+       x[i].style.display = "none";
     }
 
 	titolo = el.innerHTML
 
 	document.getElementById("title").innerHTML = titolo;
-		
-    document.getElementById(cityName).style.display = "block"; 
+
+    document.getElementById(cityName).style.display = "block";
 	w3_change("out")
 }
 </script>
