@@ -1,5 +1,9 @@
 ﻿CACHE MANIFEST
-# 08-01-2000 v1.0.0
+# Version 25092014
+
+NETWORK:
+
+CACHE:
 index.html
 ics.png
 imgs.png
@@ -8,3 +12,6 @@ tb.png
 ts.png
 w3.css
 favicon.ico
+
+FALLBACK:
+
