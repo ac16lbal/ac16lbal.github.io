@@ -15,6 +15,8 @@
 
 	<link rel="apple-touch-startup-image" href="logo.png">
 
+	<link rel="manifest" href="manifest.json">
+
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -32,6 +34,9 @@
 		body {
 			padding-top: 20px;
  		}
+		
+		/*upper padding for iphones*/
+		/*body.standalone .someContent{ display: block;}*/
 
 		body, h1 , h2, h3, h4, h5, h6, .w3-wide {
 			font-family: Verdana, sans-serif;
@@ -133,7 +138,7 @@
 </nav>
 
 <!--Top/phones_only-->
-<header class="w3-container w3-top w3-hide-large w3-uwc-blue w3-xlarge w3-padding-16">
+<header class="w3-container w3-top w3-hide-large w3-uwc-blue w3-xlarge w3-padding-16" class="main_header">
 	<a href="javascript:void(0)" class="w3-opennav" onclick="w3_change('in')" style="margin-right: 24px;"><img alt="menu" class="ics m" src="ts.png" /></a>
 	<span class="w3-wide"><b>AC Induction</b></span>
 </header>
@@ -154,7 +159,7 @@
 	<!--Divs for different contents-->
 	<div id="home" class="w3-container tab" >
 		<img alt="UWC Logo" src="tb.png" class="imgs home">
-		<p>This website contains all the informations that you need for your life here at Atlantic College. Press the menu button ( <img alt="menu" style="width:20px;height:20px;filter:invert(100%);" class="ics m" src="ts.png" /> ) at the top-left corner to navigate in the different sections. If you wanna save this site as an application, you can press "share" on your phone, and then select the option "add to homescreen". If you encounter any problem with this, feel free to ask the <b>IT Rep</b> in your house, he'll always be willing to help you in any way. If that doesn't work (they are not obniscent), just go to the <b>IT Office</b> in the science block, and the'll find the solution to your problems. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
+		<p>This website contains all the informations that you need for your life here at Atlantic College. Press the menu button ( <img alt="menu" style="width:20px;height:20px;filter:invert(100%);" class="ics m" src="ts.png" /> ) at the top-left corner to navigate in the different sections. If you wanna save this site as an application, you can press "share" on your phone, and then select the option "add to homescreen". You will need to open the app once, and then it will always be available even offline. If you encounter any problem with this, feel free to ask the <b>IT Rep</b> in your house, he'll always be willing to help you in any way. If that doesn't work (they are not obniscent), just go to the <b>IT Office</b> in the science block, and the'll find the solution to your problems. Now I'll write a bit of bullshit just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
 	</div>
 	<div id="castle" class="w3-container tab" style="display:none">
 		<img alt="St. Donats Castle" src="tb.png" class="imgs castle">
@@ -216,6 +221,19 @@
 		.register('sw.js')
         .then(function() { console.log('Service Worker Registered'); });
 }*/
+
+if (window.navigator.userAgent.indexOf('iPhone') != -1) {
+	if (window.navigator.standalone == true) {
+        // document.write('<p>homescreen<\/p>');
+	    document.getElementById("main_header").style.paddingTop = '36px';
+	} else {
+	    // document.write('<p>safari<\/p>');
+	    //document.getElementById("safari").style.display = 'block';
+    }
+} else {
+		// document.write('<p>no iOS<\/p>');
+		//document.getElementById("ios").style.display = 'block';
+}
 
 // Accordion
 function myAccFunc() {

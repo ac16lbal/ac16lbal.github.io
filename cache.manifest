@@ -1,17 +1,17 @@
 ﻿CACHE MANIFEST
-# Version 25092014
+# Version 25092014D
 
 NETWORK:
 
 CACHE:
-index.html
-ics.png
-imgs.png
-logo.png
-tb.png
-ts.png
-w3.css
-favicon.ico
+/index.html
+/ics.png
+/imgs.png
+/logo.png
+/tb.png
+/ts.png
+/w3.css
+/favicon.ico
 
 FALLBACK:
 
