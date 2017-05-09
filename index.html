@@ -350,10 +350,10 @@
 <script type="text/javascript">
 
 	w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-	
-	h = w - 300
-
-	document.getElementById("main_cont").style.width = h + "px";
+	if (w > 601) {
+		h = w - 300
+		document.getElementById("main_cont").style.width = h + "px";
+	}
 
 	msg = "If you want to save this site as an application, you can open the menu"
 	if (window.navigator.userAgent.indexOf('iPhone') != -1) {
