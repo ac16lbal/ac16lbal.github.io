@@ -350,8 +350,11 @@
 <script type="text/javascript">
 
 	w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+	console.log(w);
 	if (w > 601) {
+		console.log("true");
 		h = w - 300
+		console.log(h);
 		document.getElementById("main_cont").style.width = h + "px";
 	}
 
