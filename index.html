@@ -1,81 +1,107 @@
-<!DOCTYPE html>
-<html manifest="cache.manifest">
+<!doctype html />
+<html manifest="cache.manifest" lang="en-GB">
 <head>
-	<title>AC Induction</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	
+	<title>AC Survival Guide</title>
 
-	<link rel="stylesheet" href="w3.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-	<link rel="apple-touch-icon" href="touch-icon-iphone.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
-	<link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
-
-	<link rel="apple-touch-startup-image" href="logo.png">
-
-	<link rel="manifest" href="manifest.json">
-
-	<meta name="apple-mobile-web-app-capable" content="yes">
-
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-	<meta name="apple-mobile-web-app-title" content="AC Guide">
-
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="apple-mobile-web-app-title" content="AC Guide" />
 	<meta name="theme-color" content="#0068AB" />
-	<meta name="msapplication-navbutton-color" content="#0068AB">
+	<meta name="msapplication-navbutton-color" content="#0068AB" />
+
+	<link rel="stylesheet" href="w3.min.css" />
+	
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png" />
+	<link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png" />
+	<link rel="apple-touch-startup-image" href="logo.png" />
+
+	<link rel="manifest" href="manifest.json" />
+
+	<!--OLDER BROWSERS SUPPORT - ONLY ONLINE-->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<![endif]-->
 
 	<style>
-		.w3-sidebar a {
-			font-family: "Roboto", Verdana, sans-serif;
-	 	}
-
-		body {
-			padding-top: 20px;
- 		}
-		
-		/*upper padding for iphones*/
-		/*body.standalone .someContent{ display: block;}*/
-
 		body, h1 , h2, h3, h4, h5, h6, .w3-wide {
 			font-family: Verdana, sans-serif;
 			line-height: 1.2;
 			text-align: justify; !important
 	 	}
-		.slider{
-			color: #FFF;
+	 
+		body {
+			padding-top: 20px;
+ 			margin:auto;
+		}
+	 
+		h2 {
+			font-weight: 900;
  		}
-		.slider::-webkit-scrollbar {
-			width: 6px;
-		} 
-		.slider::-webkit-scrollbar-thumb {
-			background: #019692;
+	 
+		hr {
+			color: #019692;
+			border-color: #019692;
+			width: 80%;
+			margin: auto;
 		}
-		/*@media (max-width:992px) and (min-width:601px){.slider {
-			max-width: 33%;
-		}}*/
-		@media (max-width:600px){
-			.slider {
-				transform: translateX(-100%);
-				-webkit-transform: translateX(-100%);
-				display: block;
-			}
-			.main{
-			max-width: 100%;
-			}
+		
+		.w3-sidebar{
+			color: #FFF;
+			z-index:3;
+			top:0px;
+			display: block;
+ 		}
+		.w3-sidebar::-webkit-scrollbar {width: 6px;} 
+		.w3-sidebar::-webkit-scrollbar-thumb {background: #019692;}	
+		.w3-sidebar a {
+			font-family: "Roboto", Verdana, sans-serif;
+	 	}	
+	 
+		/*ICONS SPRITE DEFINITIONS*/
+		.ics, .icts {
+			background-size:200%;
+			background-image: url('/ics.png');
 		}
-		@media (min-width:993px){
-			.slider {
-				width: 300px;
-				padding: 16px;
-				position: relative;
-			}
-			.main {
-				float: right;
-				padding: 16px;
- 			}
+		.ics {
+			height: 25px;
+			width: 25px;
 		}
+		.icts {
+			height: 20px;
+			width: 20px;
+		}	
+		.m {background-position: 0% 0%;}
+		.s {background-position: 100% 100%;}
+		.v {background-position: 100% 0%;}
+		.x {background-position: 0% 100%;}
+	 
+		/*IMAGES FOR SECTIONS*/ /*TO USE ONLY IF JUST ONE IMAGE SPRITE IS USER*/
+		.imgs {
+			background-size:cover;
+			background-image: url('/imgs.png');
+			width: 100%;
+			max-width: 650px;
+		}
+		.castle {background-position: 0% 0%;}
+		.codes {background-position: 0% 9.09%;}
+		.councils {background-position: 0% 18.18%;}
+		.home {background-position: 0% 27.27%;}
+		.house {background-position: 0% 36.36%;}
+		.laundry {background-position: 0% 45.45%;}
+		.p6 {background-position: 0% 54.55%;}
+		.peer {background-position: 0% 63.64%;}
+		.seafront {background-position: 0% 72.73%;}
+		.staff {background-position: 0% 81.82%;}
+		.wifi {background-position: 0% 90.91%;}	
+		.health {background-position: 0% 100%;}
+		
+		/*ANIMATIONS FOR SLIDER*/
 		.slide-in {
 			animation: slide-in 0.5s forwards;
 			-webkit-animation: slide-in 0.5s forwards;
@@ -98,81 +124,60 @@
 			0% { -webkit-transform: translateX(0%); }
 			100% { -webkit-transform: translateX(-100%); }
 		}
-		hr {
-			color: #019692;
-			border-color: #019692;
-			width: 80%;
-			margin: auto;
+		
+		/*PHONES*/@media (max-width:600px){
+			.w3-sidebar {
+				transform: translateX(-100%);
+				-webkit-transform: translateX(-100%);
+				display: block !important;
+			}
+			.main{
+				max-width: 100%;
+			}
 		}
-		.wrap {
-			width:100%;
-			margin:0 auto;
-			margin-left: 16px;
+		/*TABLETS*/@media (max-width:992px) and (min-width:601px){
+			.w3-sidebar {
+				display: block !important;
+				width: 200px;
+			}
+			.main{
+				margin-left: 200px !important;
+			}
 		}
-		.left_col {
-			float:left;
-			width:40%;
+		/*COMPUTERS*/@media (min-width:993px){
+			.w3-sidebar {
+				width: 300px;
+				/*padding: 16px;
+				position: relative;*/
+			}
+			.main {
+				padding: 16px;
+ 				margin-left: 300px !important;
+			}
 		}
-		.right_col {
-			float:right;
-			width:40%;
-		}
-		.ics {
-			background-size:200%;
-			background-image: url('/ics.png');
-			height: 25px;
-			width: 25px;
-		}
-		.icts {
-			background-size:200%;
-			background-image: url('/ics.png');
-			height: 20px;
-			width: 20px;
-		}	
-		.m {background-position: 0% 0%;}
-		.s {background-position: 100% 100%;}
-		.v {background-position: 100% 0%;}
-		.x {background-position: 0% 100%;}
-		.imgs {
-			background-size:cover;
-			background-image: url('/imgs.png');
-			width: 100%;
-			max-width: 650px;
-		}
-		.castle {background-position: 0% 0%;}
-		.codes {background-position: 0% 9.09%;}
-		.councils {background-position: 0% 18.18%;}
-		.home {background-position: 0% 27.27%;}
-		.house {background-position: 0% 36.36%;}
-		.laundry {background-position: 0% 45.45%;}
-		.p6 {background-position: 0% 54.55%;}
-		.peer {background-position: 0% 63.64%;}
-		.seafront {background-position: 0% 72.73%;}
-		.staff {background-position: 0% 81.82%;}
-		.wifi {background-position: 0% 90.91%;}	
-		.health {background-position: 0% 100%;}
 	</style>
 </head>
 
-<body style="margin:auto;">
+<body>
 
-<!--Menu-->
-<nav class="w3-sidebar w3-bar-block w3-uwc-blue w3-collapse slider" style="z-index:3; top:0px;display: block;" id="mySidebar">
-    <header class="w3-container w3-hide-small w3-hide-medium" style="padding-top: 17px; padding-bottom: 17px;">
-		<img alt="UWC Logo" src="ogol.png" style="width: 100%; margin: auto;" />
-	    <span class="w3-wide" style="font-size: 43px;"><b>UWC AC</b></span>
-		<a href="javascript:void(0)" class="w3-opennav w3-right w3-hide-medium w3-hide-large" onclick="w3_change('out')"><img alt="Close menu" class="ics x" src="ts.png" /></a>
+<!--SIDEBAR-->
+<div class="w3-sidebar w3-bar-block w3-uwc-blue w3-collapse" style="z-index:3;" id="mySidebar">
+    <!--SIDEBAR HEADER - COMPUTERS AND TABLETS-->
+	<header class="w3-container w3-hide-small" style="padding-top: 17px; padding-bottom: 17px;">
+		<img alt="AC SG Logo" src="ogol.png" style="width: 100%; margin: auto;" />
+	    <strong class="w3-wide" style="font-size: 43px;">UWC AC</strong>
     </header>
 
-	<header class="w3-container w3-hide-large" style="padding-top: 17px; padding-bottom: 17px;">
+	<!--SIDEBAR HEADER - PHONES-->
+	<header class="w3-container w3-hide-large w3-hide-medium" style="padding-top: 17px; padding-bottom: 17px;">
 		<img alt="UWC Logo" src="logo.png" style="height: 28px;" />
-	    <span class="w3-wide" style="font-size: 20px;"><b>UWC</b></span>
-		<a href="javascript:void(0)" class="w3-opennav w3-right w3-hide-medium w3-hide-large" onclick="w3_change('out')"><img alt="Close menu" class="ics x" src="ts.png" /></a>
+	    <strong class="w3-wide" style="font-size: 20px;">UWC</strong>
+		<a href="javascript:void(0)" class="w3-opennav w3-right  w3-hide-large" onclick="w3_change('out')"><img alt="Close menu" class="ics x" src="ts.png" /></a>
     </header>
 
 	<hr />
 
-	<div class="w3-large" style="font-weight:bold;">
+	<nav class="w3-large" style="font-weight:bold;">
 		<a href="javascript:void(0)" class="w3-bar-item w3-button" onclick="openTab(this, 'home')">HOME</a>
 		<a href="javascript:void(0)" onclick="myAccFunc()" class="w3-bar-item w3-button">Campus <img alt="arrow down" class="ics v" src="ts.png" /></a>
 		<div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
@@ -188,226 +193,222 @@
 		<a href="#health" class="w3-bar-item w3-button" onclick="openTab(this, 'health')">Health</a>
 		<a href="#peer_listeners" class="w3-bar-item w3-button" onclick="openTab(this, 'peer_listeners')">Peer Listeners</a>
 		<a href="#hp_staff" class="w3-bar-item w3-button" onclick="openTab(this, 'hp_staff')">HP & Staff</a>
-	</div>
+	</nav>
 			
 	<hr	/>
-
-	<a href="tel:00393485536420" class="w3-bar-item w3-button w3-padding">Contacts</a>
-	<a href="#footer" class="w3-bar-item w3-button w3-padding">School Website</a>
 	
-</nav>
+	<footer>
+		<a href="tel:00393485536420" class="w3-bar-item w3-button w3-padding">Contacts</a>
+		<a href="#footer" class="w3-bar-item w3-button w3-padding">School Website</a>
+	</footer>
+</div>
 
-<!--Top/phones_only-->
-<header class="w3-container w3-top w3-hide-large w3-uwc-blue w3-xlarge w3-padding-16" class="main_header">
+<!--HEADER - PHONES ONLY-->
+<header class="w3-container w3-top w3-hide-medium w3-hide-large w3-uwc-blue w3-xlarge w3-padding-16" class="main_header">
 	<a href="javascript:void(0)" class="w3-opennav" onclick="w3_change('in')" style="margin-right: 24px;"><img alt="menu" class="ics m" src="ts.png" /></a>
-	<span class="w3-wide"><b>AC Induction</b></span>
+	<strong class="w3-wide">AC Induction</strong>
 </header>
 
-<!--Div to close menu when clicking outside-->
+<!--DIV TO CLOSE MENU CLICKING OUTSIDE-->
 <div class="w3-overlay w3-hide-large" onclick="w3_change('out')" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-<div class=""></div>
+<!--MAIN CONTENT-->
+<main class="w3-main main" id="main_cont">
 
-<!--Actual page-->
-<div class="w3-main main" id="main_cont">
-
-	<!--Spacer for top/phones_only-->
-	<div class="w3-hide-large" style="margin-top:45px"></div>
+	<!--SPACER FOR HEADER - PHONES ONLY-->
+	<div class="w3-hide-large w3-hide-medium" style="margin-top:45px"></div>
 	
-	<!--Title-->
-	<!--Divs for different contents-->
-	<div id="home" class="w3-container tab" >
+	<!--CONTENT SECTIONS-->
+	<article id="home" class="w3-container tab" >
 		<header class="w3-container w3-xlarge">
-			<h2 class="w3-left" style="font-weight: 900;">Home</h2>
+			<h2>Home</h2>
 		</header>
 		<img alt="UWC Logo" src="tb.png" class="imgs home">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Press the menu button in the top-leftcorner  (&nbsp;<img alt="menu" style="filter:invert(100%);" class="icts m" src="ts.png" />&nbsp;) to navigate in the different sections.</p>
 		<p id="browser">, and then select the option "add to homescreen". You will need to open the app once, and then it will always be available even when offline. If you encounter any problem with this, feel free to ask the <b>IT Rep</b> in your house, he'll always be willing to help you in any way. If that doesn't work (they are not obniscent), just go to the <b>IT Office</b> in the science block, and the'll find the solution to your problems.</p>
 		<p> Now I'll write a bit of bulls**t just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
-	</div>
+	</article>
 	
-	<hr class="w3-hide-medium w3-hide-small" />
+	<hr class=" w3-hide-small" />
 	
-	<div id="castle" class="w3-container tab w3-hide-small w3-hide-medium">
+	<article id="castle" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
-			<h2 class="w3-left" style="font-weight: 900;">Castle</h2>
+			<h2>Castle</h2>
 		</header>
 		<img alt="St. Donats Castle" src="tb.png" class="imgs castle">
 		<p>Let me bulls**t a bit about the castle that is very nice and colorful, quite old, and needs a bare lot of money to warm it up. there are the classrooms for the social sciences, most toks and the dining hall. your life here at Atlantic College. Now I'll write a bit of bulls**t just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
-	</div>
+	</article>
 	
-	<hr class="w3-hide-medium w3-hide-small" />
+	<hr class=" w3-hide-small" />
 
-	<div id="houses" class="w3-container tab w3-hide-small w3-hide-medium">
+	<article id="houses" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
-			<h2 class="w3-left" style="font-weight: 900;">Houses</h2>
+			<h2>Houses</h2>
 		</header>
 		<img alt="PK House" src="tb.png" class="imgs house">
 		<p>We have 8 houses: PK, Morgannwg, Powys, Gwinnidd, Whitaker, Sunley, Tice, Madiba. Atlantic College. Now I'll write a bit of bulls**t just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
-	</div>
+	</article>
 	
-	<hr class="w3-hide-medium w3-hide-small" />
+	<hr class=" w3-hide-small" />
 	
-	<div id="access_codes" class="w3-container tab w3-hide-small w3-hide-medium">
+	<article id="access_codes" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
-			<h2 class="w3-left" style="font-weight: 900;">Houses' codes</h2>
+			<h2>Houses' codes</h2>
 		</header>
 		<img alt="Pin Code" src="tb.png" class="imgs codes">
 		<p>By UK law the houses need to have an access code. here they are. This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bulls**t just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl</p>
-	</div>
+	</article>
 	
-	<hr class="w3-hide-medium w3-hide-small" />
+	<hr class=" w3-hide-small" />
 
-	<div id="seafront" class="w3-container tab w3-hide-small w3-hide-medium">
+	<article id="seafront" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
-			<h2 class="w3-left" style="font-weight: 900;">Seafront & pools</h2>
+			<h2>Seafront & pools</h2>
 		</header>
 		<img alt="Swimming pool" src="tb.png" class="imgs seafront">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bulls**t just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
-	</div>
+	</article>
 	
-	<hr class="w3-hide-medium w3-hide-small" />
+	<hr class=" w3-hide-small" />
 	
-	<div id="wifi_tech" class="w3-container tab w3-hide-small w3-hide-medium">
+	<article id="wifi_tech" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
-			<h2 class="w3-left" style="font-weight: 900;">Wifi & tech</h2>
+			<h2>Wifi & tech</h2>
 		</header>
 		<img alt="Tech shit" src="tb.png" class="imgs wifi">
 		<p>Activate wifi ip: 192.168.100.102<br/>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bulls**t just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
-	</div>
+	</article>
 	
-	<hr class="w3-hide-medium w3-hide-small" />
+	<hr class=" w3-hide-small" />
 	
-	<div id="laundry" class="w3-container tab w3-hide-small w3-hide-medium">
+	<article id="laundry" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
-			<h2 class="w3-left" style="font-weight: 900;">Laundry</h2>
+			<h2>Laundry</h2>
 		</header>
 		<img alt="Laundry room" src="tb.png" class="imgs laundry">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bulls**t just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
-	</div>
+	</article>
 	
-	<hr class="w3-hide-medium w3-hide-small" />
+	<hr class=" w3-hide-small" />
 	
-	<div id="platform_6" class="w3-container tab w3-hide-small w3-hide-medium">
+	<article id="platform_6" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
-			<h2 class="w3-left" style="font-weight: 900;">Platform 6</h2>
+			<h2>Platform 6</h2>
 		</header>
 		<img alt="Platform 6" src="tb.png" class="imgs p6">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bulls**t just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
-	</div>
+	</article>
 	
-	<hr class="w3-hide-medium w3-hide-small" />
+	<hr class=" w3-hide-small" />
 	
-	<div id="councils" class="w3-container tab w3-hide-small w3-hide-medium">
+	<article id="councils" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
-			<h2 class="w3-left" style="font-weight: 900;">Student councils</h2>
+			<h2>Student councils</h2>
 		</header>
 		<img alt="Student council" src="tb.png" class="imgs councils">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bulls**t just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebflBasically, the old service worker continues to control the page as long as there is a tab open to the page. So, you *could * close and re-open the page or press the skipWaiting button, but a longer-term solution is to just enable the Update on Reload checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads.Basically, the old service worker continues to control the page as long as there is a tab open to the page. So, you *could * close and re-open the page or press the skipWaiting button, but a longer-term solution is to just enable the Update on Reload checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads.Basically, the old service worker continues to control the page as long as there is a tab open to the page. So, you *could * close and re-open the page or press the skipWaiting button, but a longer-term solution is to just enable the Update on Reload checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads. </p>
-	</div>
+	</article>
 	
-	<hr class="w3-hide-medium w3-hide-small" />
+	<hr class=" w3-hide-small" />
 	
-	<div id="health" class="w3-container tab w3-hide-small w3-hide-medium">
+	<article id="health" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
-			<h2 class="w3-left" style="font-weight: 900;">Health center</h2>
+			<h2>Health center</h2>
 		</header>
 		<img alt="Health center" src="tb.png" class="imgs health">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bulls**t just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
-	</div>
+	</article>
 	
-	<hr class="w3-hide-medium w3-hide-small" />
+	<hr class=" w3-hide-small" />
 	
-	<div id="peer_listeners" class="w3-container tab w3-hide-small w3-hide-medium">
+	<article id="peer_listeners" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
-			<h2 class="w3-left" style="font-weight: 900;">Peer listeners</h2>
+			<h2>Peer listeners</h2>
 		</header>
 		<img alt="Peer listeners" src="tb.png" class="imgs peer">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bulls**t just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
-	</div>
+	</article>
 	
-	<hr class="w3-hide-medium w3-hide-small" />
+	<hr class=" w3-hide-small" />
 
-	<div id="hp_staff" class="w3-container tab w3-hide-small w3-hide-medium">
+	<article id="hp_staff" class="w3-container tab w3-hide-small">
 		<header class="w3-container w3-xlarge">
-			<h2 class="w3-left" style="font-weight: 900;">School staff/h2>
+			<h2>School staff</h2>
 		</header>
 		<img alt="Staff" src="tb.png" class="imgs staff">
 		<p>This website contains all the informations that you need for your life here at Atlantic College. Now I'll write a bit of bulls**t just to test the page, anyways i relly feqjew fbsdn nf few nf fj cdbwfe asfbeaf bg bskfb esbkhdb esbfe casfbiwl few fblb albfe flbfef ceh albfel rfbc lafbleb ferfblf blae rfbac erlfbe alf lebfl </p>
-	</div>
+	</article>
 
-	<hr class="w3-hide-medium w3-hide-small" />
+</main>
 
-
-	<!--Footer-->
-	<footer class="w3-container w3-padding-16 w3-text-white w3-uwc-green">
-		<p><a href="www.atlnticcollege.org">Atlantic College Official WebSite</a></p>
-	</footer>
-
-</div>
+<!--FOOTER-->
+<footer id="footer" class="w3-container w3-padding-16 w3-text-white w3-uwc-green">
+	<summary><address><p><a href="www.atlnticcollege.org">Atlantic College Official WebSite</a></p></address></summary>
+	<p><time datetime="2017-05-16T14:52Z">Last update: 16/05/2017 14:51</time></p>
+</footer>
 
 <script type="text/javascript">
 
-	w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-	console.log(w);
-	if (w > 601) {
-		console.log("true");
-		h = w - 300
-		console.log(h);
-		document.getElementById("main_cont").style.width = h + "px";
-	}
+	//GET WINDOW SIZE
+	//w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+	
 
-	msg = "If you want to save this site as an application, you can open the menu"
-	if (window.navigator.userAgent.indexOf('iPhone') != -1) {
-		//alert('iphone')
-		document.getElementById("browser").innerHTML = msg + ' "share" on your iPhone (<img alt="share icon" class="icts s" src="ts.png" />)' + document.getElementById("browser").innerHTML;
-	} else if (window.navigator.userAgent.indexOf('iPad') != -1) {
-		//alert('ipad')
-		document.getElementById("browser").innerHTML = msg + ' "share" on your iPad (<img alt="share icon" class="icts s" src="ts.png" />)' + document.getElementById("browser").innerHTML;
-	} else {
-		//alert('smartphone')
-		document.getElementById("browser").innerHTML = msg + ' on your SmartPhone (<b>&#8942</b> or "more") in the top-right corner' + document.getElementById("browser").innerHTML;
-	}
+	//CHANGE INSTRUCTIONS TO ADD TO HOMESCREEN BASED ON BROWSER
 
+	//RECON IF ALREADY RUNNING FROM HOMESCREEN
 	if (window.navigator.standalone == true) {
 		//alert('homescreen')
-		document.getElementById("browser").style.display = 'none';
-		document.getElementById("main_header").style.paddingTop = '36px';
+		document.getElementById("browser").style.display = 'none'
+		document.getElementById("main_header").style.paddingTop = '36px'
 	} else {
-		//alert('browser')
-		// document.write('<p>safari<\/p>');
-		//document.getElementById("browser").style.display = 'block';
-	}
-
-	// Accordion
-	function myAccFunc() {
-		var x = document.getElementById("demoAcc");
-		if (x.className.indexOf("w3-show") == -1) {
-			x.className += " w3-show";
-		} else {
-			x.className = x.className.replace(" w3-show", "");
-		}
-	}
-
-	// Script to open and close sidebar
-	function w3_change(what) {
-		document.getElementById("mySidebar").className = "w3-sidebar w3-bar-block w3-white w3-collapse slider slide-" + what;
-		if (what == "in") {
-			document.getElementById("myOverlay").style.display = "block";
-		} else {
-			document.getElementById("myOverlay").style.display = "none";
-		}
-	}
-
-	function openTab(el, tabName) {
-		if (window.innerWidth < 993) {
-			var i;
-			var x = document.getElementsByClassName("tab");
-			for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";
+		ua = window.navigator.userAgent
+		msg = "If you want to save this site as an application, you can open the menu "
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|/i.test(ua) ) {
+			//PROBABLE MOBILE PHONE
+			if (ua.indexOf('iPhone') != -1) {
+				//alert('iphone')
+				document.getElementById("browser").innerHTML = msg + '"share" on your iPhone (<img alt="share icon" class="icts s" src="ts.png" />)' + document.getElementById("browser").innerHTML
+			} else if (ua.indexOf('iPad') != -1) {
+				//alert('ipad')
+				document.getElementById("browser").innerHTML = msg + '"share" on your iPad (<img alt="share icon" class="icts s" src="ts.png" />)' + document.getElementById("browser").innerHTML
+			} else {
+				//alert('smartphone')
+				document.getElementById("browser").innerHTML = msg + ' on your SmartPhone (<b>&#8942</b> or "more") in the top-right corner' + document.getElementById("browser").innerHTML
 			}
+		} else {
+			document.getElementById("browser").style.display = 'none'
+		}
+	}
 
-			document.getElementById(tabName).style.cssText = "display: block !important";
+	//EXPAND "CAMPUS" MENU OPTION
+	function myAccFunc() {
+		var x = document.getElementById("demoAcc")
+		if (x.className.indexOf("w3-show") == -1) {
+			x.className += " w3-show"
+		} else {
+			x.className = x.className.replace(" w3-show", "")
+		}
+	}
+
+	//OPEN AND CLOSE SIDEBAR
+	function w3_change(what) {
+		document.getElementById("mySidebar").className = "w3-sidebar w3-bar-block w3-white w3-collapse slider slide-" + what
+		if (what == "in") {
+			document.getElementById("myOverlay").style.display = "block"
+		} else {
+			document.getElementById("myOverlay").style.display = "none"
+		}
+	}
+
+	//OPEN SECTION FROM SIDEBAR
+	function openTab(el, tabName) {
+		if (window.innerWidth < 601) {
+			var i
+			var x = document.getElementsByClassName("tab")
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none"
+			}
+			document.getElementById(tabName).style.cssText = "display: block !important"
 			w3_change("out")
 		}
 	}
